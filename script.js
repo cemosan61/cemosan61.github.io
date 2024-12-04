@@ -3,21 +3,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Zutaten in der richtigen Reihenfolge
     const ingredients = [
-        { className: "bun-top", delay: 0 },
-        { className: "lettuce", delay: 500 },
-        { className: "tomato", delay: 1000 },
-        { className: "cheese", delay: 1500 },
-        { className: "meat", delay: 2000 },
-        { className: "bun-bottom", delay: 2500 },
+        { className: "bun-top" },
+        { className: "lettuce" },
+        { className: "tomato" },
+        { className: "cheese" },
+        { className: "meat" },
+        { className: "bun-bottom" },
     ];
+
+    let currentOffset = 0; // Startposition (von unten nach oben)
 
     // Zutaten nacheinander hinzufügen
     ingredients.forEach((ingredient, index) => {
         setTimeout(() => {
             const element = document.createElement("div");
             element.classList.add("ingredient", ingredient.className);
-            element.style.zIndex = ingredients.length - index; // Stapelreihenfolge
+            
+            // Position der Zutat basierend auf der aktuellen Stapelhöhe
+            element.style.bottom = `${currentOffset}px`;
             burgerContainer.appendChild(element);
-        }, ingredient.delay);
+
+            // Höhe der Zutat (40px) zum Offset hinzufügen
+            currentOffset += 40;
+        }, index * 500); // Verzögerung zwischen den Zutaten
     });
 });
