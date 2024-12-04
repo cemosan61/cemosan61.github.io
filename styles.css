@@ -26,14 +26,11 @@ h1 {
     height: 300px;
     margin: 0 auto;
     overflow: hidden;
-    border: 1px solid #ddd;
-    background: #fff;
-    border-radius: 10px;
 }
 
 #burger {
     position: absolute;
-    bottom: 20px; /* Der Stapel beginnt am unteren Rand des Containers */
+    bottom: 0; /* Der Stapel beginnt am unteren Rand des Containers */
     width: 100%;
 }
 
@@ -43,6 +40,7 @@ h1 {
     width: 100%;
     height: 40px;
     border-radius: 20px;
+    opacity: 0;
     animation: fall 1.5s ease-in-out forwards;
 }
 
@@ -74,13 +72,13 @@ h1 {
 /* Animations */
 @keyframes fall {
     0% {
-        top: -100px;
+        top: -50px;
         opacity: 0;
     }
     80% {
         opacity: 1;
     }
     100% {
-        top: 0; /* Zielposition */
+        top: 0;
     }
 }

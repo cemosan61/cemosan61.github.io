@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {
             element.classList.add("ingredient", ingredient.className);
             
             // Position der Zutat basierend auf der aktuellen Stapelhöhe
-            element.style.bottom = `${currentOffset}px`;
+            element.style.top = `${currentOffset}px`;
             burgerContainer.appendChild(element);
 
-            // Höhe der Zutat (40px) zum Offset hinzufügen
+            // Höhe der Zutat (40px) zum Offset hinzufügen, um sie übereinander zu stapeln
             currentOffset += 40;
         }, index * 500); // Verzögerung zwischen den Zutaten
     });
