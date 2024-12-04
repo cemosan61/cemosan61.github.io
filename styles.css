@@ -28,13 +28,6 @@ h1 {
     overflow: hidden;
 }
 
-#burger {
-    position: absolute;
-    width: 100%;
-    bottom: 0; /* Der Stapel beginnt am unteren Rand des Containers */
-}
-
-/* Zutaten */
 .ingredient {
     position: absolute;
     width: 100%;
@@ -44,6 +37,7 @@ h1 {
     animation: fall 1.5s ease-in-out forwards;
 }
 
+/* Zutaten-Stile */
 .bun-top {
     background: linear-gradient(to bottom, #f5c242, #d69b2f);
 }
@@ -69,10 +63,10 @@ h1 {
     background: linear-gradient(to bottom, #f5c242, #d69b2f);
 }
 
-/* Animations */
+/* Fall-Animation */
 @keyframes fall {
     0% {
-        top: 100px;
+        top: -100px;
         opacity: 0;
     }
     80% {
