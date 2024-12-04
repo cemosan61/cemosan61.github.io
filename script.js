@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { className: "bun-bottom" },
     ];
 
-    let currentOffset = 100; // Startposition für die erste Zutat (von oben nach unten)
+    let currentOffset = 200; // Startposition für die erste Zutat (von oben nach unten)
 
     // Zutaten nacheinander hinzufügen
     ingredients.forEach((ingredient, index) => {
