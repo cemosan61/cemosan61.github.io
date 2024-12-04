@@ -23,15 +23,15 @@ h1 {
 #burger-container {
     position: relative;
     width: 200px;
-    height: 300px;
+    height: 400px;
     margin: 0 auto;
     overflow: hidden;
 }
 
 #burger {
     position: absolute;
-    bottom: 0; /* Der Stapel beginnt am unteren Rand des Containers */
     width: 100%;
+    bottom: 0; /* Der Stapel beginnt am unteren Rand des Containers */
 }
 
 /* Zutaten */
@@ -72,7 +72,7 @@ h1 {
 /* Animations */
 @keyframes fall {
     0% {
-        top: -50px;
+        top: -100px;
         opacity: 0;
     }
     80% {

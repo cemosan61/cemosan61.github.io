@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { className: "bun-bottom" },
     ];
 
-    let currentOffset = 0; // Startposition (von unten nach oben)
+    let currentOffset = 100; // Startposition für die erste Zutat (von oben nach unten)
 
     // Zutaten nacheinander hinzufügen
     ingredients.forEach((ingredient, index) => {
@@ -19,11 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const element = document.createElement("div");
             element.classList.add("ingredient", ingredient.className);
             
-            // Position der Zutat basierend auf der aktuellen Stapelhöhe
+            // Position der Zutat: Jede Zutat wird 40px höher als die vorherige hinzugefügt
             element.style.top = `${currentOffset}px`;
+            
+            // Hinzufügen der Zutat zum Container
             burgerContainer.appendChild(element);
 
-            // Höhe der Zutat (40px) zum Offset hinzufügen, um sie übereinander zu stapeln
+            // Erhöhe die aktuelle Offset-Position für die nächste Zutat
             currentOffset += 40;
         }, index * 500); // Verzögerung zwischen den Zutaten
     });
