@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="'de"></html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title data-de="Reina-Grillhaus">Reina-Grillhaus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href=#hero data="Start">Start</a></li>
+                <li><a href=#one-click data="Übersicht">Übersicht</a></li>
+                <li><a href=#story data="Unsere Geschichte">Unsere Geschichte</a></li>
+                <li><a href=#owner data="Gastgeber">Gastgeber</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <!-- Wir ersetzen das statische "Rojbas" durch ein Element, das den rotierenden Text anzeigen wird -->
+            <h1 id="rotating-text" class="black-text">Rojbas</h1>
+            <p class="intro">Willkommen im Reina-Grillhaus, dem Herzen Anatoliens</p>
+        </div>
+    </header>
+
+    <section class="one-click" id="one-click">
+        <div class="container">
+            <h2>Übersicht</h2>
+            <div class="story-content">
+                <p>Alles mit nur einem Klick erreichbar</p>
+                <button type="speisekarte">Speisekarte</button>
+                <button type="rsvp">Reservierung</button>
+                <button type="maps">Route erstellen</button>
+            </div>
+        </div>
+        
+    </section>
+    
+    <section class="story" id="story">
+        <div class="container">
+            <h2>Unsere Geschichte</h2>
+            <div class="story-content">
+                <p>Wir, euer Reina Team, haben es uns zu Mission gemacht, euch mit auf eine Reise in die Geschmackswelt Anatoliens zu entführen und Ihren Gaumen zu verzaubern</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="owner" id="owner">
+        <div class="container">
+            <h2>Eure Gastgeber</h2>
+            <div class="owner-content">
+                <div class="owner-item">
+                    <img src="assets/images/atacan.jpg" alt="Bild von Atacan" class="owner-image" />
+                    <p class="owner-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel dictum elit. 
+                    </p>
+                </div>
+                <div class="owner-item">
+                    <img src="assets/images/meral.png" alt="Bild von Meral" class="owner-image" />
+                    <p class="owner-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel dictum elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>

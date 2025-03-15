@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'Switzer';
+    src: url("assets/font/Switzer/Fonts/WEB/fonts/Switzer-Regular.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Boska';
+    src: url("assets/font/Boska/Fonts/WEB/fonts/Boska-Medium.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Switzer';
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    text-align: center;
+
+}
+
+h1, h2, h3 {
+    font-family: 'Boska', serif;
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+.navbar {
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media (min-width: 769px) {
+    .navbar nav {
+        justify-content: center;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 2px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 20px;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    
+    nav a {
+        display: block;
+        padding: 0.5rem 0;
+    }
+}
+
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+                url('assets/images/breakfast') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero-content .intro {
+    font-family: 'Boska', serif;
+    font-size: 2rem;
+    color: var(--light-text);
+    margin-bottom: 0.5rem;
+}
+
+.owner-content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.owner-item {
+    text-align: center;
+    max-width: 200px;
+}
+
+.owner-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+.owner-description {
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
