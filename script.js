@@ -3,7 +3,7 @@ function toggleMenu() {
 }
 
 // Array der Begrüßungstexte
-const headings = ["Willkommen", "Rojbas", "Hos geldiniz"];
+const headings = ["Willkommen", "Rojbaş", " Hoş geldiniz"];
 
 // Index, um durch die Texte zu iterieren
 let currentIndex = 0;
